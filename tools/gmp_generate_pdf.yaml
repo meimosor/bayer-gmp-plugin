@@ -1,6 +1,6 @@
 identity:
   name: gmp_generate_pdf
-  author: bayer
+  author: meimosor
   label:
     en_US: Generate GMP Report PDF
     zh_Hans: 生成GMP报告PDF

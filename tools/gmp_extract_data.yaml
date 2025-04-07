@@ -1,6 +1,6 @@
 identity:
   name: gmp_extract_data
-  author: bayer
+  author: meimosor
   label:
     en_US: Extract GMP Report Data
     zh_Hans: 提取GMP报告数据
