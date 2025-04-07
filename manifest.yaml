@@ -1,0 +1,40 @@
+version: 0.0.1
+type: plugin
+author: bayer
+name: bayer-gmp-reporter
+label:
+  en_US: Bayer GMP Reporter
+  zh_Hans: 拜耳GMP报告生成器
+description:
+  en_US: Generate standardized GMP investigation reports from conversation data
+  zh_Hans: 从对话数据生成标准化GMP调查报告
+icon: icon.svg
+resource:
+  memory: 1048576
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/bayer_gmp.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-03-28T20:32:11.5096821+08:00
+privacy: PRIVACY.md
+verified: false 

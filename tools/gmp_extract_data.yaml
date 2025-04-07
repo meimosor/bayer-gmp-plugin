@@ -1,0 +1,27 @@
+identity:
+  name: gmp_extract_data
+  author: bayer
+  label:
+    en_US: Extract GMP Report Data
+    zh_Hans: 提取GMP报告数据
+  tool_type: completion
+description:
+  human:
+    en_US: Extract GMP report data from conversation history
+    zh_Hans: 从对话历史中提取GMP报告数据
+  llm: Extract structured GMP report data from conversation history
+parameters:
+  - name: conversation_id
+    type: string
+    required: true
+    label:
+      en_US: Conversation ID
+      zh_Hans: 对话ID
+    human_description:
+      en_US: The ID of the conversation to extract report data from
+      zh_Hans: 用于提取报告数据的对话ID
+    llm_description: The unique identifier of the conversation from which to extract report data
+    form: llm
+extra:
+  python:
+    source: tools/gmp_extract_data.py 

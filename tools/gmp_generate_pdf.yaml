@@ -1,0 +1,83 @@
+identity:
+  name: gmp_generate_pdf
+  author: bayer
+  label:
+    en_US: Generate GMP Report PDF
+    zh_Hans: 生成GMP报告PDF
+  tool_type: completion
+description:
+  human:
+    en_US: Generate a PDF report from GMP report data
+    zh_Hans: 从GMP报告数据生成PDF报告
+  llm: Generate a standardized PDF format GMP investigation report from structured data
+parameters:
+  - name: report_data
+    type: string
+    required: true
+    label:
+      en_US: Report Data
+      zh_Hans: 报告数据
+    human_description:
+      en_US: The structured GMP report data (as JSON string) to generate a PDF from
+      zh_Hans: 用于生成PDF的结构化GMP报告数据（JSON字符串）
+    llm_description: A JSON string containing all required fields for the GMP report
+    form: llm
+  - name: conversation_id
+    type: string
+    required: false
+    label:
+      en_US: Conversation ID
+      zh_Hans: 对话ID
+    human_description:
+      en_US: Optional conversation ID for data extraction
+      zh_Hans: 可选的用于数据提取的对话ID
+    llm_description: Optional conversation ID to extract report data from if no direct data is provided
+    form: llm
+  - name: optimize_data
+    type: boolean
+    required: false
+    default: false
+    label:
+      en_US: Optimize Data
+      zh_Hans: 优化数据
+    human_description:
+      en_US: Whether to use AI to optimize the report data before generating the PDF
+      zh_Hans: 是否在生成PDF前使用AI优化报告数据
+    llm_description: If true, the plugin will use the Dify platform model to optimize the report data before generating the PDF
+    form: llm
+  - name: user_id
+    type: string
+    required: false
+    label:
+      en_US: User ID
+      zh_Hans: 用户ID
+    human_description:
+      en_US: User identifier for API calls
+      zh_Hans: 用于API调用的用户标识
+    llm_description: User ID to identify the user in API calls to Dify
+    form: llm
+  - name: api_base
+    type: string
+    required: false
+    label:
+      en_US: Dify API Base URL
+      zh_Hans: Dify API基础URL
+    human_description:
+      en_US: The base URL for Dify API calls (e.g. https://api.dify.ai)
+      zh_Hans: 用于Dify API调用的基础URL（例如 https://api.dify.ai）
+    llm_description: The base URL of the Dify API service (default is https://api.dify.ai)
+    form: llm
+  - name: api_key
+    type: string
+    required: false
+    label:
+      en_US: Dify API Key
+      zh_Hans: Dify API密钥
+    human_description:
+      en_US: The API key for authenticating with Dify
+      zh_Hans: 用于Dify身份验证的API密钥
+    llm_description: Your API key for authenticating with the Dify platform
+    form: llm
+extra:
+  python:
+    source: tools/gmp_generate_pdf.py 

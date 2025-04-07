@@ -1,0 +1,27 @@
+identity:
+  name: gmp_preview_report
+  author: bayer
+  label:
+    en_US: Preview GMP Report
+    zh_Hans: 预览GMP报告
+  tool_type: completion
+description:
+  human:
+    en_US: Preview the HTML version of the GMP investigation report before generating the PDF
+    zh_Hans: 在生成PDF前预览GMP调查报告的HTML版本
+  llm: Generate an HTML preview of the GMP investigation report from structured data
+parameters:
+  - name: report_data
+    type: string
+    required: true
+    label:
+      en_US: Report Data
+      zh_Hans: 报告数据
+    human_description:
+      en_US: The structured GMP report data (as JSON string) to generate a preview from
+      zh_Hans: 用于生成预览的结构化GMP报告数据（JSON字符串）
+    llm_description: A JSON string containing all required fields for the GMP report
+    form: llm
+extra:
+  python:
+    source: tools/gmp_preview_report.py 

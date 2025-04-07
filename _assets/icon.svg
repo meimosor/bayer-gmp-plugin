@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" rx="16" fill="#2B82D8" />
+  <!-- 文档背景 -->
+  <rect x="16" y="12" width="35" height="45" rx="4" fill="white" />
+  <!-- 文档标题线 -->
+  <rect x="21" y="20" width="25" height="2" rx="1" fill="#2B82D8" />
+  <rect x="21" y="26" width="25" height="2" rx="1" fill="#2B82D8" />
+  <rect x="21" y="32" width="15" height="2" rx="1" fill="#2B82D8" />
+  <!-- 文档正文线 -->
+  <rect x="21" y="40" width="25" height="2" rx="1" fill="#B3C9E4" />
+  <rect x="21" y="46" width="20" height="2" rx="1" fill="#B3C9E4" />
+  <rect x="21" y="52" width="22" height="2" rx="1" fill="#B3C9E4" />
+  <!-- 放大镜 -->
+  <circle cx="50" cy="45" r="10" stroke="#FFFFFF" stroke-width="4" fill="none" />
+  <line x1="57" y1="52" x2="65" y2="60" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <!-- GMP文字 -->
+  <text x="25" y="68" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">GMP</text>
+</svg> 

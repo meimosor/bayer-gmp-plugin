@@ -1,0 +1,46 @@
+identity:
+  author: bayer
+  name: bayer_gmp
+  label:
+    en_US: Bayer GMP Reporter
+    zh_Hans: 拜耳GMP报告生成器
+  description:
+    en_US: Generate standardized GMP investigation reports from conversation data
+    zh_Hans: 从对话数据生成标准化GMP调查报告
+  icon: icon.svg
+  tags:
+    - productivity
+    - business
+    - utilities
+credentials_for_provider:
+  spring_app_api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: Spring App API Key
+      zh_Hans: Spring应用API密钥
+    placeholder:
+      en_US: Please input your Spring App API key
+      zh_Hans: 请输入你的Spring应用API密钥
+    help:
+      en_US: API key for accessing the Spring App PDF generation service
+      zh_Hans: 用于访问Spring应用PDF生成服务的API密钥
+  spring_app_url:
+    type: text-input
+    required: true
+    label:
+      en_US: Spring App URL
+      zh_Hans: Spring应用URL
+    placeholder:
+      en_US: http://localhost:8080
+      zh_Hans: http://localhost:8080
+    help:
+      en_US: URL for the Spring App PDF generation service
+      zh_Hans: Spring应用PDF生成服务的URL
+tools:
+  - tools/gmp_extract_data.yaml
+  - tools/gmp_generate_pdf.yaml
+  - tools/gmp_preview_report.yaml
+extra:
+  python:
+    source: provider/bayer_gmp.py 
